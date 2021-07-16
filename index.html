@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="heading">Rock, Paper, Scissors</h1>
+      <div class="img-div" id="rps-div">
+        <!-- Rock Image -->
+        <img
+          onclick="rpsGame(this)"
+          id="rock"
+          src="https://images.unsplash.com/photo-1614032686163-bdc24c13d0b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cm9jayUyMHBhcGVyJTIwc2Npc3NvcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="It is a picture of 'rock' sign made by hand"
+        />
+
+        <!-- Paper image -->
+        <img
+          onclick="rpsGame(this)"
+          id="paper"
+          src="https://images.unsplash.com/photo-1614032686158-b880f7e82c18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cm9jayUyMHBhcGVyJTIwc2Npc3NvcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="It is a picture of 'paper' sign made by hand"
+        />
+
+        <!-- Scissors image -->
+        <img
+          onclick="rpsGame(this)"
+          id="scissors"
+          src="https://images.unsplash.com/photo-1614032686099-e648d6dea9b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9jayUyMHBhcGVyJTIwc2Npc3NvcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="It is a picture of 'scissors' sign made by hand"
+        />
+      </div>
+
+      <!-- This div will display the results -->
+      <div class="result-div">
+        <div id="bot">Bot's Choice</div>
+        <p id="result-para">Play Rock, Paper, Scissors</p>
+        <div id="human">User's Choice</div>
+      </div>
+
+      <!-- This button will reset the game -->
+      <div class="res-div">
+        <button class="primary" onclick="remove()">Reset game</button>
+      </div>
+
+      <!-- This div will display the scores -->
+      <div class="score-div">
+        <h2>Score Board:</h2>
+        <div class="score">
+          <h3>Computer's Score</h3>
+          <p id="computer-score">0</p>
+        </div>
+        <div class="score">
+          <h3>User's Score</h3>
+          <p id="user-score">0</p>
+        </div>
+        <div class="score">
+          <h3>Tie</h3>
+          <p id="tie-score">0</p>
+        </div>
+      </div>
+
+      <!-- This button will reset the scores -->
+      <div class="res-div">
+        <button class="primary" onclick="reset()">Reset the score</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
